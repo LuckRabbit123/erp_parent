@@ -9,147 +9,52 @@
     <script type="text/javascript" src="ui/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="ui/locale/easyui-lang-zh_CN.js"></script>
     <script type="text/javascript" src="ui/jquery.serializejson.min.js"></script>
-
+    <script type="text/javascript" src="js/crud.js"></script>
     <script type="text/javascript">
-        var method ;
-     $(function () {
-         $('#grid').datagrid({
-             url:'dep_getlist',
-             columns:[[
-                 {field:'uuid',title:'部门编号',width:100},
-                 {field:'name',title:'部门名称',width:100},
-                 {field:'tele',title:'部门联系电话',width:100,align:'right'},
-                 {field:'-',title:'操作',formatter: function(value,row,index) {
-                         var oper = "<a href=\"javascript:void(0)\" onclick=\"edit(" + row.uuid + ')">修改</a>';
-                         oper += ' <a href="javascript:void(0)" onclick="del(' + row.uuid + ')">删除</a>';
-                         return oper;
-                    }}
-             ]],
-             singleSelect:true,
-             pagination:true,
-             toolbar: [{
-                 text:'新增',
-                 iconCls: 'icon-add',
-                 handler: function(){
-                     method = "add";
-                     $('#editDlg').dialog('open');
-                 }
-             }]
-         });
-        //绑定事件
-         $('#btnSearch').bind('click',function() {
-             //把表单数据转换成json对象
-             var formData = $('#searchForm').serializeJSON();
-             alert(JSON.stringify($('#grid').datagrid('getData')));
-             $('#grid').datagrid('load',formData);
-             //把json对象转换成字符串
-             // alert(JSON.stringify(formData));
-             // $.ajax({
-             //     url:'dep_getlist',
-             //     data:formData,
-             //     dataType:'json',
-             //     type:'post',
-             //     success:function (rtn) {
-             //         //grid加载器
-             //         //datagrid(参数1,参数2)
-             //         //参数1 =》 datagrid里的方法名称
-             //         //参数2 =》 datagrid里的方法所需要的参数
-             //         $('#grid').datagrid('loadData',rtn);
-             //     }
-             // })
-             //{total:total,rows:rtn}
-             // alert(JSON.stringify($('#grid').datagrid('getData')));
-         });
+        var name="dep";
+        var columns=[[
+            {field:'uuid',title:'编号',width:100},
+            {field:'name',title:'部门名称',width:100},
+            {field:'tele',title:'联系电话',width:100},
 
-         $('#editDlg').dialog({
-             title: 'My Dialog',
-             width: 400,
-             height: 200,
-             closed: true,//初始化时窗口是否为关闭状态，true表示关闭
-             modal: true
-         });
-         $('#btnSave').bind('click',function(){
-             var formData = $('#editForm').serializeJSON();
-             $.ajax({
-                 url: 'dep_'+method,
-                 data: formData,
-                 dataType: 'json',
-                 type: 'post',
-                 success:function(rtn){
-                     $.messager.alert("提示",rtn.message,'info',function(){
-                         //成功的话，我们要关闭窗口
-                         $('#editDlg').dialog('close');
-                         //刷新表格数据
-                         $('#grid').datagrid('reload');
-                     });
-                 }
-             });
-         });
-
-     });
-     //删除部门
-     function del(uuid) {
-       $.messager.confirm("确认","确认要删除吗？",function (yes) {
-           $.ajax({
-               url: 'dep_delete?id=' + uuid,
-               dataType: 'json',
-               type: 'post',
-               success:function(rtn){
-                   $.messager.alert("提示",rtn.message,'info',function(){
-                       //刷新表格数据
-                       $('#grid').datagrid('reload');
-                   });
-               }
-           });
-       })
-     }
-     //修改部门
-     function edit(uuid){
-         //弹出窗口
-         $('#editDlg').dialog('open');
-
-         //清空表单内容
-         $('#editForm').form('clear');
-         method = "update";
-         //加载数据
-         $('#editForm').form('load','dep_get?id=' + uuid);
-     }
+            {field:'-',title:'操作',width:200,formatter: function(value,row,index){
+                    var oper = "<a href=\"javascript:void(0)\" onclick=\"edit(" + row.uuid + ')">修改</a>';
+                    oper += ' <a href="javascript:void(0)" onclick="del(' + row.uuid + ')">删除</a>';
+                    return oper;
+                }}
+        ]];
 
     </script>
 </head>
-
 <body>
-<div class="easyui-panel" style="padding-left: 4px; border-bottom: 0px;">
-    <div style="height: 2px "></div>
-<form id="searchForm">
-    <table>
-        <tr>
-            <td>部门名称</td>
-            <td><input name="dep1.name"></td>
-        </tr>
-        <tr>
-            <td>部门电话</td>
-            <td><input name="dep1.tele"></td>
-        </tr>
-    </table>
-    <!--默认是submit-->
-    <button id="btnSearch" type="button">查询</button>
-</form>
-    <div style="height: 2px "></div>
-</div >
-<title id="grid"></title>
+<div class="easyui-panel" style="padding-left:4px;border-bottom:0px;">
+    <div style="height:2px;"></div>
+    <form id="searchForm">
+        部门名称：<input name="t1.name" >
+        联系电话：<input name="t1.tele" >
+
+        <button type="button" id="btnSearch">查询</button>
+    </form>
+    <div style="height:2px;"></div>
+</div>
+<table id="grid"></table>
+
 <div id="editDlg">
     <form id="editForm">
-        <tr>
-            <td>部门名称</td>
-            <td><input name="dep.name"><input type="hidden" name="dep.uuid"></td>
-        </tr>
-        <tr>
-            <td>部门电话</td>
-            <td><input name="dep.tele"></td>
-        </tr>
+        <input name="t.uuid" type="hidden">
+
+        <table>
+            <tr>
+                <td>部门名称</td><td><input name="t.name"> </td>
+            </tr>
+            <tr>
+                <td>联系电话</td><td><input name="t.tele"> </td>
+            </tr>
+
+        </table>
         <button id="btnSave" type="button">保存</button>
     </form>
 </div>
+
 </body>
 </html>
