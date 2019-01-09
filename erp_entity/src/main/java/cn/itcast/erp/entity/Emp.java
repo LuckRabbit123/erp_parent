@@ -13,7 +13,7 @@ public class Emp {
     private String tele;// 联系电话
     private String address;// 联系地址
     private java.util.Date birthday;// 出生年月日
-    private Dep dep;// 部门编号
+    private Dep depuuid;// 部门编号
 
     public Long getUuid() {
         return uuid;
@@ -87,18 +87,19 @@ public class Emp {
         this.birthday = birthday;
     }
 
-    public Dep getDep() {
-        return dep;
+    public Dep getDepuuid() {
+        return depuuid;
     }
 
-    public void setDep(Dep dep) {
-        this.dep = dep;
+    public void setDepuuid(Dep depuuid) {
+        this.depuuid = depuuid;
     }
+
 
     @Override
     public String toString() {
         return "Emp [uuid=" + uuid + ", username=" + username + ", pwd=" + pwd + ", name=" + name + ", gender=" + gender
                 + ", email=" + email + ", tele=" + tele + ", address=" + address + ", birthday=" + birthday + ", dep="
-                + dep + "]";
+                + depuuid + "]";
     }
 }

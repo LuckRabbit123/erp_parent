@@ -9,5 +9,6 @@ public class EmpBiz extends BaseBiz<Emp> implements IEmpBiz {
 
     public void setEmpDao(IEmpDao empDao) {
         this.empDao = empDao;
+        super.setBaseDao(this.empDao);
     }
 }

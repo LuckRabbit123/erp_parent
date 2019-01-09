@@ -10,13 +10,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class EmpDaoTest {
     @Test
-    public void testDesp() {
+    public void testEmp () {
         Object param=null;
         ApplicationContext ac = new ClassPathXmlApplicationContext("classpath*:applicationContext_*.xml");
         IEmpDao empDao = (EmpDao) ac.getBean("empDao");
-        Emp emp1 = new Emp();
-        Emp emp2 = new Emp();
-        Object object = new Object();
-        System.out.println(empDao.getList(emp1,emp2,param));
+        empDao.get((long) 1);
     }
 }
