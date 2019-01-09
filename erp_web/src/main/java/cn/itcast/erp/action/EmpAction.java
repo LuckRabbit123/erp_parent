@@ -1,12 +1,12 @@
 package cn.itcast.erp.action;
 
-import cn.itcast.biz.impl.EmpBiz;
+import cn.itcast.biz.IEmpBiz;
 import cn.itcast.erp.entity.Emp;
 
 public class EmpAction extends BaseAction<Emp> {
-    private EmpBiz empBiz;
+    private IEmpBiz empBiz;
 
-    public void setEmpBiz(EmpBiz empBiz) {
+    public void setEmpBiz(IEmpBiz empBiz) {
         this.empBiz = empBiz;
         super.setBaseBiz(this.empBiz);
     }
