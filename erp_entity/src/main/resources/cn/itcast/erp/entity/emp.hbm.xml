@@ -22,13 +22,13 @@
             </generator>
         </id>
         <property name="username"/>
-        <property name="pwd"/>
+        <property name="pwd" update="false"/>
         <property name="name"/>
         <property name="gender"/>
         <property name="email"/>
         <property name="tele"/>
         <property name="address"/>
         <property name="birthday"/>
-        <many-to-one name="uuid" class="cn.itcast.erp.entity.Dep" column="depuuid"></many-to-one>
+        <many-to-one name="dep" class="cn.itcast.erp.entity.Dep" column="depuuid"></many-to-one>
     </class>
 </hibernate-mapping>
