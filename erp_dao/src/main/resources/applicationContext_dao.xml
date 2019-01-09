@@ -17,6 +17,8 @@
 	</bean>
 
 	<!--<import resource="classpath:applicationContext_datasource.xml"/>-->
-	
+	<bean id="empDao" class="cn.itcast.dao.impl.EmpDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>
 	

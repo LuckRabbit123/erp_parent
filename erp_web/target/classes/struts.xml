@@ -7,5 +7,8 @@
         <action name="dep_*" class="depAction" method="{1}">
 
         </action>
+        <action name="emp_*" class="empAction" method="{1}">
+
+        </action>
     </package>
 </struts>
