@@ -16,6 +16,8 @@
 	<bean name="depBiz" class="cn.itcast.biz.impl.DepBiz">
 		<property name="depDao" ref="depDao"></property>
 	</bean>
-	
+	<bean name="empBiz" class="cn.itcast.biz.impl.EmpBiz">
+		<property name="empDao" ref="empDao"></property>
+	</bean>
 </beans>
 	

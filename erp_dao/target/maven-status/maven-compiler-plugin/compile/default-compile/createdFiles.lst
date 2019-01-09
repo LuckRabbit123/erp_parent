@@ -1,2 +1,4 @@
-cn/itcast/dao/impl/BaseDao.class
+cn/itcast/dao/impl/EmpDao.class
 cn/itcast/dao/IBaseDao.class
+cn/itcast/dao/impl/BaseDao.class
+cn/itcast/dao/IEmpDao.class

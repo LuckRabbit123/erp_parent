@@ -13,7 +13,7 @@ public class DepDaoTest {
     public void testDesp(){
         ApplicationContext ac = new ClassPathXmlApplicationContext("classpath*:applicationContext_*.xml");
         IDepDao depDao = (IDepDao)ac.getBean("depDao");
-        System.out.println(depDao.getList().size());
+        System.out.println();
         //ac.getBean("sessionFactory");
 
 //        String firstName = null;
