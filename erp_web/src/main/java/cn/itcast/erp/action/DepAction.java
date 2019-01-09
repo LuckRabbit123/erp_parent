@@ -9,6 +9,7 @@ public class DepAction extends BaseAction<Dep> {
     private IDepBiz depBiz;
 
     public void setDepBiz(IDepBiz depBiz) {
+        System.out.println("此时进入了Dep");
         this.depBiz = depBiz;
         super.setBaseBiz(this.depBiz);
     }
