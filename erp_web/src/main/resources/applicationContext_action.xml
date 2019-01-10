@@ -22,5 +22,9 @@
 		<property name="empBiz" ref="empBiz">
 		</property>
 	</bean>
+	<bean id="goodsAction" class="cn.itcast.erp.action.GoodsAction" scope="prototype">
+		<property name="goodsBiz" ref="goodsBiz">
+		</property>
+	</bean>
 </beans>
 	

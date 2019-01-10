@@ -16,8 +16,11 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<!--<import resource="classpath:applicationContext_datasource.xml"/>-->
 	<bean id="empDao" class="cn.itcast.dao.impl.EmpDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+	<bean id="goodsdao" class="cn.itcast.dao.impl.GoodsDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 </beans>
