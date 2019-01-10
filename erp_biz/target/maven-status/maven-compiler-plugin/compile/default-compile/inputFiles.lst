@@ -1,6 +1,8 @@
 /Users/ubon/jaid/java/erp_parent/erp_biz/src/main/java/cn/itcast/biz/impl/EmpBiz.java
 /Users/ubon/jaid/java/erp_parent/erp_biz/src/main/java/cn/itcast/biz/IEmpBiz.java
+/Users/ubon/jaid/java/erp_parent/erp_biz/src/main/java/cn/itcast/biz/impl/GoodsBiz.java
 /Users/ubon/jaid/java/erp_parent/erp_biz/src/main/java/cn/itcast/biz/impl/BaseBiz.java
+/Users/ubon/jaid/java/erp_parent/erp_biz/src/main/java/cn/itcast/biz/IGoodsBiz.java
 /Users/ubon/jaid/java/erp_parent/erp_biz/src/main/java/cn/itcast/biz/IBaseBiz.java
 /Users/ubon/jaid/java/erp_parent/erp_biz/src/main/java/cn/itcast/biz/impl/DepBiz.java
 /Users/ubon/jaid/java/erp_parent/erp_biz/src/main/java/cn/itcast/biz/IDepBiz.java
