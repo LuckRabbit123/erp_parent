@@ -20,7 +20,7 @@
 		<property name="empDao" ref="empDao"></property>
 	</bean>
 	<bean name="goodsBiz" class="cn.itcast.biz.impl.GoodsBiz">
-		<property name="goodsDao" ref="goodsdao"></property>
+		<property name="goodsDao" ref="goodsDao"></property>
 	</bean>
 </beans>
 	

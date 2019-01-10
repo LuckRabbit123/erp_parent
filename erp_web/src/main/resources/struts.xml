@@ -13,5 +13,8 @@
         <action name="goods_*" class="goodsAction" method="{1}">
 
         </action>
+        <action name="login_*" class="loginAction" method="{1}">
+
+        </action>
     </package>
 </struts>

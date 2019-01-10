@@ -5,7 +5,7 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
   <welcome-file-list>
-    <welcome-file>emp.html</welcome-file>
+    <welcome-file>index.html</welcome-file>
   </welcome-file-list>
 
   <!-- 加载spring配置文件 -->

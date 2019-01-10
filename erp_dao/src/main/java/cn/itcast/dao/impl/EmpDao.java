@@ -6,7 +6,19 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 
+import java.util.List;
+
 public class EmpDao extends BaseDao<Emp> implements IEmpDao {
+    @SuppressWarnings("")
+    public Emp findUsernameAndPwd(String username, String pwd) {
+        String hql = "from Emp where username=? and pwd=?";
+        List<Emp> list = (List<Emp>) this.getHibernateTemplate().find(hql,username,pwd);
+        if(list.size() > 0 ){
+            return  list.get(0);
+        }
+        //如果登录名或密码不正确将返回null
+        return null;
+    }
 
     public DetachedCriteria getDetachedCriteria(Emp emp1, Emp emp2, Object param){
         DetachedCriteria dc = DetachedCriteria.forClass(Emp.class);
@@ -48,4 +60,5 @@ public class EmpDao extends BaseDao<Emp> implements IEmpDao {
         }
         return dc;
     }
+
 }
