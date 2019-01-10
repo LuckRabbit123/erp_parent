@@ -22,5 +22,8 @@
 	<bean name="goodsBiz" class="cn.itcast.biz.impl.GoodsBiz">
 		<property name="goodsDao" ref="goodsDao"></property>
 	</bean>
+	<bean name="goodsTypeBiz" class="cn.itcast.biz.impl.GoodsTypeBiz">
+		<property name="goodsTypeDao" ref="goodsTypeDao"></property>
+	</bean>
 </beans>
 	

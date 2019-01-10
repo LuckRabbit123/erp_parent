@@ -1,4 +1,5 @@
 cn/itcast/erp/action/DepAction.class
+cn/itcast/erp/action/GoodstypeAction.class
 cn/itcast/erp/action/EmpAction.class
 cn/itcast/erp/action/GoodsAction.class
 cn/itcast/erp/action/BaseAction.class

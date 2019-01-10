@@ -37,7 +37,6 @@ $(function(){
     //显示登入用户名
     showName();
     //给菜单赋值
-    _menus = ???;
     InitLeftMenu();
     tabClose();
     tabCloseEven();

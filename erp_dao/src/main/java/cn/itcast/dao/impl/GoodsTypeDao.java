@@ -6,7 +6,8 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.MatchMode;
 import org.hibernate.criterion.Restrictions;
 
-public class GoodsTypeDaoDao extends BaseDao<Goodstype> implements IGoodsTypeDao {
+public class GoodsTypeDao extends BaseDao<Goodstype> implements IGoodsTypeDao {
+
     @Override
     public DetachedCriteria getDetachedCriteria(Goodstype goodstype1, Goodstype goodstype2, Object param) {
         DetachedCriteria dc = DetachedCriteria.forClass(Goodstype.class);

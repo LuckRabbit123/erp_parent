@@ -33,7 +33,7 @@
 	</bean>
 	<!-- GoodstypeAction -->
 	<bean id="goodstypeAction" class="cn.itcast.erp.action.GoodstypeAction" scope="prototype">
-		<property name="goodstypeBiz" ref="goodstypeBiz"></property>
+		<property name="goodstypeBiz" ref="goodsTypeBiz"></property>
 	</bean>
 </beans>
 	

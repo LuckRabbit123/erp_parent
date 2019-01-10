@@ -1,4 +1,6 @@
+cn/itcast/dao/IGoodsTypeDao.class
 cn/itcast/dao/impl/EmpDao.class
+cn/itcast/dao/impl/GoodsTypeDao.class
 cn/itcast/dao/impl/GoodsDao.class
 cn/itcast/dao/IBaseDao.class
 cn/itcast/dao/IGoodsDao.class
