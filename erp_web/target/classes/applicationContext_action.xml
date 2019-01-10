@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
-	xsi:schemaLocation="
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="
 		http://www.springframework.org/schema/beans 
 		http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context 
@@ -14,13 +14,22 @@
 		">
 
 
+
+	<!-- 部门 -->
 	<bean id="depAction" class="cn.itcast.erp.action.DepAction" scope="prototype">
-		<property name="depBiz" ref="depBiz">
-		</property>
+		<property name="depBiz" ref="depBiz"></property>
 	</bean>
+	<!-- 员工 -->
 	<bean id="empAction" class="cn.itcast.erp.action.EmpAction" scope="prototype">
-		<property name="empBiz" ref="empBiz">
-		</property>
+		<property name="empBiz" ref="empBiz"></property>
+	</bean>
+	<!-- 商品 -->
+	<bean id="goodsAction" class="cn.itcast.erp.action.GoodsAction" scope="prototype">
+		<property name="goodsBiz" ref="goodsBiz"></property>
+	</bean>
+	<!-- 登录 -->
+	<bean id="loginAction" class="cn.itcast.erp.action.LoginAction" scope="prototype">
+		<property name="empBiz" ref="empBiz"></property>
 	</bean>
 </beans>
 	

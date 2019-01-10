@@ -39,13 +39,30 @@ public class LoginAction {
 
     public void checkUser(){
         //查询是否存在
-        Emp loginUser = empBiz.findUsernameAndPwd(username,pwd);
-        if(loginUser != null){
-            //记录当前登录的用户
-            ActionContext.getContext().getSession().put("loginUser",loginUser);
-            ajaxReturn(true,"登入成功，欢迎你"+loginUser.getName());
-        }else {
-            ajaxReturn(false,"用户名或密码不正确");
+
+        try {
+            Emp loginUser = empBiz.findUsernameAndPwd(username,pwd);
+            if(loginUser != null){
+                //记录当前登录的用户
+                ActionContext.getContext().getSession().put("loginUser",loginUser);
+                ajaxReturn(true,"登入成功，欢迎你"+loginUser.getName());
+            }else {
+                ajaxReturn(false,"用户名或密码不正确");
+            }
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+            ajaxReturn(false,"登录失败");
+        }
+    }
+    public void showName(){
+        //获取当前登陆的用户
+        Emp emp = (Emp) ActionContext.getContext().getSession().get("loginUser");
+        //session是否会超时，用户是否登陆过了
+        if(null != emp){
+            ajaxReturn(true, emp.getName());
+        }else{
+            ajaxReturn(false, "");
         }
     }
 
