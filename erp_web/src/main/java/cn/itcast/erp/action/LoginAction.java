@@ -65,6 +65,9 @@ public class LoginAction {
             ajaxReturn(false, "");
         }
     }
+    public  void loginOut(){
+        ActionContext.getContext().getSession().remove("loginUser");
+    }
 
     public void ajaxReturn(boolean success, String message){
         //返回前端的JSON数据

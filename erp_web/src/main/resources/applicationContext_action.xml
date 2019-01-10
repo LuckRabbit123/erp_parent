@@ -31,5 +31,9 @@
 	<bean id="loginAction" class="cn.itcast.erp.action.LoginAction" scope="prototype">
 		<property name="empBiz" ref="empBiz"></property>
 	</bean>
+	<!-- GoodstypeAction -->
+	<bean id="goodstypeAction" class="cn.itcast.erp.action.GoodstypeAction" scope="prototype">
+		<property name="goodstypeBiz" ref="goodstypeBiz"></property>
+	</bean>
 </beans>
 	

@@ -11,12 +11,20 @@ var _menus={
     "menus":
         [
             {
-                "icon":"icon-sys","menuid":"100","menuname":"一级菜单","menus":
+                "icon":"icon-sys","menuid":"100","menuname":"基础数据","menus":
                     [
-                        {"icon":"icon-sys","menuid":"101","menuname":"二级菜单","url":""}	,
-                        {"icon":"icon-sys","menuid":"102","menuname":"二级菜单","url":""}
+                        {"icon":"icon-sys","menuid":"101","menuname":"商品类型管理","url":"goodstype.html"}	,
+                        {"icon":"icon-sys","menuid":"102","menuname":"商品管理","url":"goods.html"}
+                    ]
+            },
+            {
+                "icon":"icon-sys","menuid":"200","menuname":"人事管理","menus":
+                    [
+                        {"icon":"icon-sys","menuid":"201","menuname":"部门管理","url":"dep.html"}	,
+                        {"icon":"icon-sys","menuid":"202","menuname":"员工管理","url":"emp.html"}
                     ]
             }
+
 
         ]
 };
@@ -28,10 +36,20 @@ $(function(){
 
     //显示登入用户名
     showName();
+    //给菜单赋值
+    _menus = ???;
     InitLeftMenu();
     tabClose();
     tabCloseEven();
-
+    //安全退出
+    $('#loginOut').bind('click',function(){
+        $.ajax({
+            url: 'login_loginOut',
+            success: function(){
+                location.href="login.html";
+            }
+        });
+    });
 
 })
 function showName() {

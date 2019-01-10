@@ -23,5 +23,10 @@
 	<bean id="goodsDao" class="cn.itcast.dao.impl.GoodsDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+
+	<bean id="goodsTypeDao" class="cn.itcast.dao.impl.GoodsTypeDaoDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
 </beans>
 	
