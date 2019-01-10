@@ -23,7 +23,7 @@
 		</property>
 	</bean>
 	<bean id="goodsAction" class="cn.itcast.erp.action.GoodsAction" scope="prototype">
-		<property name="baseBiz" ref="baseBiz">
+		<property name="goodsBiz" ref="goodsBiz">
 		</property>
 	</bean>
 </beans>

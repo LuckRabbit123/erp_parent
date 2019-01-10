@@ -20,7 +20,7 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 
-	<bean id="goodsdao" name="cn.itcast.dao.impl.GoodsDao">
+	<bean id="goodsdao" class="cn.itcast.dao.impl.GoodsDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
 </beans>
