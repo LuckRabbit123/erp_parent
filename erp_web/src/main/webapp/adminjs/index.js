@@ -16,18 +16,10 @@ var _menus={
                         {"icon":"icon-sys","menuid":"101","menuname":"商品类型管理","url":"goodstype.html"}	,
                         {"icon":"icon-sys","menuid":"102","menuname":"商品管理","url":"goods.html"}
                     ]
-            },
-            {
-                "icon":"icon-sys","menuid":"200","menuname":"人事管理","menus":
-                    [
-                        {"icon":"icon-sys","menuid":"201","menuname":"部门管理","url":"dep.html"}	,
-                        {"icon":"icon-sys","menuid":"202","menuname":"员工管理","url":"emp.html"}
-                    ]
             }
-
-
         ]
 };
+
 
 
 
@@ -36,8 +28,17 @@ $(function(){
 
     //显示登入用户名
     showName();
-    //给菜单赋值
-    InitLeftMenu();
+    //获取菜单数据
+    $.ajax({
+        url: 'menu_getMenuTree',
+        type: 'post',
+        dataType: 'json',
+        success: function(rtn){
+            //给菜单赋值
+            _menus=rtn;
+            InitLeftMenu();
+        }
+    });
     tabClose();
     tabCloseEven();
     //安全退出
