@@ -23,10 +23,9 @@ var _menus={
 
 
 
-
 $(function(){
 
-    //显示登入用户名
+    //显示登陆用户名
     showName();
     //获取菜单数据
     $.ajax({
@@ -52,7 +51,11 @@ $(function(){
     });
 
 })
-function showName() {
+
+/**
+ * 显示登陆用户名
+ */
+function showName(){
     $.ajax({
         url: 'login_showName',
         dataType: 'json',
@@ -71,7 +74,6 @@ function showName() {
         }
     });
 }
-
 
 
 //初始化左侧
@@ -329,14 +331,62 @@ function msgShow(title, msgString, msgType) {
 
 //设置登录窗口
 function openPwd() {
-    $('#w').window({
+    $('#w').dialog({
         title: '修改密码',
         width: 300,
+        height: 180,
         modal: true,
-        shadow: true,
         closed: true,
-        height: 160,
-        resizable:false
+        buttons:[{
+            text:'保存',
+            iconCls: 'icon-save',
+            handler:function(){
+                //提交保存
+
+                var oldPwd = $('#txtOldPass').val();
+                var newPwd = $('#txtNewPass').val();
+                var rePwd = $('#txtRePass').val();
+
+                if(oldPwd == ''){
+                    $.messager.alert('提示','原密码不能为空','info');
+                    return;
+                }
+
+                if(newPwd == ''){
+                    $.messager.alert('提示','新密码不能为空','info');
+                    return;
+                }
+
+                if(rePwd != newPwd){
+                    $.messager.alert('提示','确认密码不一致','info');
+                    return;
+                }
+
+                $.ajax({
+                    url: 'emp_updatePwd',
+                    data: {"oldPwd": oldPwd, "newPwd":newPwd},
+                    dataType: 'json',
+                    type: 'post',
+                    success:function(rtn){
+                        $.messager.alert('提示',rtn.message, 'info',function(){
+                            if(rtn.success){
+                                $('#w').dialog('close');
+                                //清空内容
+                                $('#txtOldPass').val('');
+                                $('#txtNewPass').val('');
+                                $('#txtRePass').val('');
+                            }
+                        });
+                    }
+                });
+            }
+        },{
+            text:'关闭',
+            iconCls: 'icon-cancel',
+            handler:function(){
+
+            }
+        }]
     });
 }
 //关闭登录窗口

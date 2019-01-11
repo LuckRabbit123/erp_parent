@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import cn.itcast.biz.IBaseBiz;
+import cn.itcast.erp.entity.Emp;
 import org.apache.struts2.ServletActionContext;
 
 import com.alibaba.fastjson.JSON;
@@ -185,6 +186,9 @@ public class BaseAction<T> {
             }
         }
         return JSON.toJSONString(dataMap);
+    }
+    public Emp getLoginUser(){
+        return (Emp) ActionContext.getContext().getSession().get("loginUser");
     }
 
     /**

@@ -35,5 +35,9 @@
 	<bean id="goodstypeAction" class="cn.itcast.erp.action.GoodstypeAction" scope="prototype">
 		<property name="goodstypeBiz" ref="goodsTypeBiz"></property>
 	</bean>
+	<!--检索菜单-->
+	<bean id="menuAction" class="cn.itcast.erp.action.MenuAction" scope="prototype">
+		<property name="menuBiz" ref="menuBiz"></property>
+	</bean>
 </beans>
 	

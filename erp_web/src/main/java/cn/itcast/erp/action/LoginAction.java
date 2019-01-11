@@ -41,7 +41,7 @@ public class LoginAction {
         //查询是否存在
 
         try {
-            Emp loginUser = empBiz.findUsernameAndPwd(username,pwd);
+            Emp loginUser = empBiz.findByUsernameAndPwd(username,pwd);
             if(loginUser != null){
                 //记录当前登录的用户
                 ActionContext.getContext().getSession().put("loginUser",loginUser);

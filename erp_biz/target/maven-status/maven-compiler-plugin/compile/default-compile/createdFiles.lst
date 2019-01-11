@@ -1,8 +1,11 @@
-cn/itcast/biz/impl/GoodsTypeBiz.class
-cn/itcast/biz/IGoodsBiz.class
-cn/itcast/biz/IEmpBiz.class
 cn/itcast/biz/IGoodsTypeBiz.class
-cn/itcast/biz/impl/GoodsBiz.class
+cn/itcast/exception/ErpException.class
 cn/itcast/biz/impl/BaseBiz.class
+cn/itcast/biz/impl/GoodsTypeBiz.class
+cn/itcast/biz/impl/MenuBiz.class
+cn/itcast/biz/IGoodsBiz.class
+cn/itcast/biz/IMenuBiz.class
+cn/itcast/biz/IEmpBiz.class
+cn/itcast/biz/impl/GoodsBiz.class
 cn/itcast/biz/impl/EmpBiz.class
 cn/itcast/biz/IBaseBiz.class

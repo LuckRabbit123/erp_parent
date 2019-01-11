@@ -19,5 +19,9 @@
         <action name="goodstype_*" class="goodstypeAction" method="{1}">
 
         </action>
+
+        <action name="menu_*" class="menuAction" method="{1}">
+
+        </action>
     </package>
 </struts>

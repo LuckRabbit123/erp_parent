@@ -133,6 +133,12 @@
             <artifactId>ojdbc6</artifactId>
             <version>11</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-core</artifactId>
+            <version>1.2.3</version>
+        </dependency>
     </dependencies>
     <!-- 版本锁定  -->
     <dependencyManagement>
