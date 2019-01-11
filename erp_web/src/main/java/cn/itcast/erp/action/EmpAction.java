@@ -54,6 +54,17 @@ public class EmpAction extends BaseAction<Emp> {
             ajaxReturn(false, "修改密码失败");
         }
     }
-
+    /**
+     * 重置密码
+     */
+    public void updatePwd_reset(){
+        try{
+            empBiz.updatePwd_reset(getId(),newPwd);
+            ajaxReturn(true,"重置密码成功");
+        }catch (Exception e){
+            e.printStackTrace();
+            ajaxReturn(false,"重置密码失败");
+        }
+    }
 
 }

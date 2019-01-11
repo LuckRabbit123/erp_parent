@@ -28,5 +28,8 @@
 	<bean name="menuBiz" class="cn.itcast.biz.impl.MenuBiz">
 		<property name="menuDao" ref="menuDao"></property>
 	</bean>
+	<bean name="" class="cn.itcast.biz.impl.SupplierBiz">
+		<property name="supplierDao" ref="supplierDao"></property>
+	</bean>
 </beans>
 	

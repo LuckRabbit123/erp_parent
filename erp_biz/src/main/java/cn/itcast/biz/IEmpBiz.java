@@ -16,4 +16,8 @@ public interface IEmpBiz extends IBaseBiz<Emp> {
      * 修改密码
      */
     void updatePwd(Long uuid, String oldPwd, String newPwd);
+    /**
+     * 重置密码
+     */
+    void updatePwd_reset(long uuid,String newPwd);
 }

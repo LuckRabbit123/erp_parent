@@ -39,5 +39,8 @@
 	<bean id="menuAction" class="cn.itcast.erp.action.MenuAction" scope="prototype">
 		<property name="menuBiz" ref="menuBiz"></property>
 	</bean>
+	<bean id="supplierAction" class="cn.itcast.erp.action.SupplierAction" scope="prototype">
+		<property name="supplierBiz" ref="supplierBiz"></property>
+	</bean>
 </beans>
 	

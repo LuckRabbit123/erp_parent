@@ -67,13 +67,11 @@ public class EmpBiz extends BaseBiz<Emp> implements IEmpBiz {
     /**
      * 重置密码
      */
-    public void updatePwd_reset(Long uuid, String newPwd){
+    public void updatePwd_reset(long uuid, String newPwd){
         //取出员工信息
         Emp emp = empDao.get(uuid);
         empDao.updatePwd(uuid, encrypt(newPwd,emp.getUsername()));
     }
-
-
     /**
      * 加密
      * @param source
@@ -84,5 +82,4 @@ public class EmpBiz extends BaseBiz<Emp> implements IEmpBiz {
         Md5Hash md5 = new Md5Hash(source, salt, hashIterations);
         return md5.toString();
     }
-
 }

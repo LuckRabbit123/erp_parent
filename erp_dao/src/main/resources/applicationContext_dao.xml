@@ -31,5 +31,8 @@
 	<bean id="menuDao" class="cn.itcast.dao.impl.MenuDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	<bean id="supplierDao" class= "cn.itcast.dao.impl.SupplierDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>
 	
