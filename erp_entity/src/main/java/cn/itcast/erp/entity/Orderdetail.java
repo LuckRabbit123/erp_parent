@@ -6,7 +6,7 @@ import com.alibaba.fastjson.annotation.JSONField;
  * 订单明细实体类
  * @author Administrator *
  */
-public class Orderdetail {
+public class  Orderdetail {
 
     /**未入库 */
     public static final String STATE_NOT_IN = "0";
