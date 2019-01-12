@@ -1,4 +1,7 @@
 cn/itcast/erp/entity/Menu.class
-cn/itcast/erp/entity/Goodstype.class
 cn/itcast/erp/entity/Emp.class
 cn/itcast/erp/entity/Goods.class
+cn/itcast/erp/entity/Goodstype.class
+cn/itcast/erp/entity/Orders.class
+cn/itcast/erp/entity/Supplier.class
+cn/itcast/erp/entity/Orderdetail.class

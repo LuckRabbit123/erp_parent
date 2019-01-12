@@ -23,5 +23,12 @@
         <action name="menu_*" class="menuAction" method="{1}">
 
         </action>
+        <!-- 供应商 -->
+        <action name="supplier_*" class="supplierAction" method="{1}">
+
+        </action>
+        <action name="orders_*" class="ordersAction" method="{1}">
+
+        </action>
     </package>
 </struts>

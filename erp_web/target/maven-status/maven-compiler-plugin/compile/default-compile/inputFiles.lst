@@ -1,7 +1,9 @@
 /Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/EmpAction.java
 /Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/LoginAction.java
 /Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/BaseAction.java
+/Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/SupplierAction.java
 /Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/MenuAction.java
 /Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/DepAction.java
 /Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/GoodstypeAction.java
+/Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/OrdersAction.java
 /Users/ubon/jaid/java/erp_parent/erp_web/src/main/java/cn/itcast/erp/action/GoodsAction.java

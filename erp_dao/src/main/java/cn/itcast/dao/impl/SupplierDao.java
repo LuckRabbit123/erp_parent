@@ -9,7 +9,7 @@ import org.hibernate.criterion.Restrictions;
 
 public class SupplierDao extends BaseDao<Supplier> implements ISupplierDao {
 
-
+//TODO：需要写入menu数据到数据库中
     /**
      * 构建查询条件
      * @param dep1

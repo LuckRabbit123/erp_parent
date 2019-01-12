@@ -28,8 +28,11 @@
 	<bean name="menuBiz" class="cn.itcast.biz.impl.MenuBiz">
 		<property name="menuDao" ref="menuDao"></property>
 	</bean>
-	<bean name="" class="cn.itcast.biz.impl.SupplierBiz">
+	<bean name="supplierBiz" class="cn.itcast.biz.impl.SupplierBiz">
 		<property name="supplierDao" ref="supplierDao"></property>
+	</bean>
+	<bean name="ordersBiz" class="cn.itcast.biz.impl.OrdersBiz">
+		<property name="ordersDao" ref="ordersDao"></property>
 	</bean>
 </beans>
 	
