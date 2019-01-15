@@ -95,6 +95,21 @@ public class OrdersBiz extends BaseBiz<Orders> implements IOrdersBiz {
         orders.setChecker(empUuid);
     }
 
+    public void doStart(Long uuid, Long empUuid) {
+        //获取订单，进入持久化状态
+        Orders orders = ordersDao.get(uuid);
+        //订单状态
+        if(!Orders.STATE_CHECK.equals(orders.getState())){
+            throw  new ErpException("亲！该订单已经确认过了");
+        }
+        //修改订单状态
+        orders.setState(Orders.STATE_START);
+        //审核的时间
+        orders.setChecktime(new Date());
+        //审核人
+        orders.setStarter(empUuid);
+    }
+
     /**
      * 获取员工名称
      * @param uuid 员工编号

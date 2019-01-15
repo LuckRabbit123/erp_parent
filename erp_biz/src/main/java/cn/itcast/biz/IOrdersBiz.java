@@ -9,4 +9,6 @@ public interface IOrdersBiz extends IBaseBiz<Orders> {
      * @param empUuid 审核员
      */
     void doCheck(Long uuid,Long empUuid);
+    void doStart(Long uuid,Long empUuid);
+
 }

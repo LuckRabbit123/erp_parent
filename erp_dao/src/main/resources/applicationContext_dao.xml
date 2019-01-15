@@ -37,5 +37,14 @@
 	<bean id="ordersDao" class="cn.itcast.dao.impl.OrdersDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	<bean id="orderdetailDao" class="cn.itcast.dao.impl.OrderdetailDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="storedetailDao" class="cn.itcast.dao.impl.StoredetailDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="storeoperDao" class="cn.itcast.dao.impl.StoreoperDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>
 	

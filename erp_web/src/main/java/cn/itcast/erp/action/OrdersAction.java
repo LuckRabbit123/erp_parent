@@ -76,4 +76,26 @@ public class OrdersAction extends BaseAction<Orders>{
             e.printStackTrace();
         }
     }
+    /**
+     * 订单确认
+     */
+    public void doStart(){
+        //获取当前登陆用户
+        Emp loginUser = getLoginUser();
+        if(null == loginUser){
+            //用户没有登陆，session已失效
+            ajaxReturn(false, "亲！您还没有登陆");
+            return;
+        }
+        try {
+            //调用审核业务
+            ordersBiz.doStart(getId(), loginUser.getUuid());
+            ajaxReturn(true, "确认成功");
+        } catch(ErpException e){
+            ajaxReturn(false, e.getMessage());
+        }catch (Exception e) {
+            ajaxReturn(false, "确认失败");
+            e.printStackTrace();
+        }
+    }
 }
