@@ -36,5 +36,16 @@
 		<property name="supplierDao" ref="supplierDao"></property>
 		<property name="empDao" ref="empDao"></property>
 	</bean>
+	<bean name="orderstailBiz" class="cn.itcast.biz.impl.OrderstailBiz">
+		<property name="orderdetailDao" ref="orderdetailDao"></property>
+		<property name="storedetailDao" ref="storedetailDao"></property>
+		<property name="storeoperDao" ref="storeoperDao"></property>
+	</bean>
+	<bean name="storedetailBiz" class="cn.itcast.biz.impl.StoredetailBiz">
+		<property name="storedetailDao" ref="storedetailDao"></property>
+	</bean>
+	<bean name="storeBiz" class="cn.itcast.biz.impl.StoreBiz">
+		<property name="storeDao" ref="storeDao"/>
+	</bean>
 </beans>
 	

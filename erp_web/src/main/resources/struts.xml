@@ -30,5 +30,17 @@
         <action name="orders_*" class="ordersAction" method="{1}">
 
         </action>
+        <!-- 订单明细 -->
+        <action name="orderdetail_*" class="orderstailAction" method="{1}">
+
+        </action>
+        <!-- 仓库库存 -->
+        <action name="storedetail_*" class="storedetailAction" method="{1}">
+
+        </action>
+        <!-- 仓库 -->
+        <action name="store_*" class="storeAction" method="{1}" >
+
+        </action>
     </package>
 </struts>

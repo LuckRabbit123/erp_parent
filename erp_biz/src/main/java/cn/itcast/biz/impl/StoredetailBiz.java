@@ -9,5 +9,6 @@ public class StoredetailBiz extends BaseBiz<Storedetail> implements IStoredetail
 
     public void setStoredetailDao(IStoredetailDao storedetailDao) {
         this.storedetailDao = storedetailDao;
+        super.setBaseDao(this.storedetailDao);
     }
 }

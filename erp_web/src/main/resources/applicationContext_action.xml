@@ -42,8 +42,17 @@
 	<bean id="supplierAction" class="cn.itcast.erp.action.SupplierAction" scope="prototype">
 		<property name="supplierBiz" ref="supplierBiz"></property>
 	</bean>
-	<bean id="ordersAction" class="cn.itcast.erp.action.OrdersAction">
+	<bean id="ordersAction" class="cn.itcast.erp.action.OrdersAction" scope="prototype">
 		<property name="ordersBiz" ref="ordersBiz"></property>
+	</bean>
+	<bean id="orderstailAction" class="cn.itcast.erp.action.OrderstailAction" scope="prototype">
+		<property name="orderstailBiz" ref="orderstailBiz"/>
+	</bean>
+	<bean id="storedetailAction" class="cn.itcast.erp.action.StoredetailAction" scope="prototype">
+		<property name="storedetailBiz" ref="storedetailBiz"/>
+	</bean>
+	<bean id="storeAction" class="cn.itcast.erp.action.StoreAction">
+		<property name="storeBiz" ref="storeBiz"/>
 	</bean>
 </beans>
 	

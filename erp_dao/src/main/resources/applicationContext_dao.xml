@@ -46,5 +46,8 @@
 	<bean id="storeoperDao" class="cn.itcast.dao.impl.StoreoperDao">
 		<property name="sessionFactory" ref="sessionFactory"></property>
 	</bean>
+	<bean id="storeDao" class="cn.itcast.dao.impl.StoreDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 </beans>
 	

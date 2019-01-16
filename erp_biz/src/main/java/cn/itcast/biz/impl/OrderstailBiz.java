@@ -20,6 +20,7 @@ public class OrderstailBiz extends BaseBiz<Orderdetail> implements IOrderstailBi
 
     public void setOrderdetailDao(IOrderdetailDao orderdetailDao) {
         this.orderdetailDao = orderdetailDao;
+        super.setBaseDao(this.orderdetailDao);
     }
 
     public void setStoredetailDao(IStoredetailDao storedetailDao) {
@@ -31,7 +32,7 @@ public class OrderstailBiz extends BaseBiz<Orderdetail> implements IOrderstailBi
     }
 
     /**
-     * 入库
+     * 入库 uuid 为订单编号
      */
     public void doInStore(Long uuid,Long storeuuid, Long empuuid){
         //******** 第1步 更新商品明细**********
@@ -88,7 +89,7 @@ public class OrderstailBiz extends BaseBiz<Orderdetail> implements IOrderstailBi
         Orderdetail queryParam = new Orderdetail();
         Orders orders = detail.getOrders();
         queryParam.setOrders(orders);
-        //2. 查询订单下是否还存在状态为0的明细
+        //2. 查询订单下是否还存状态为在0的明细
         queryParam.setState(Orderdetail.STATE_NOT_IN);
         //3. 调用 getCount方法，来计算是否存在状态为0的明细
         long count = orderdetailDao.getCount(queryParam, null, null);

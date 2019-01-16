@@ -44,5 +44,8 @@
 	<bean name="storedetailBiz" class="cn.itcast.biz.impl.StoredetailBiz">
 		<property name="storedetailDao" ref="storedetailDao"></property>
 	</bean>
+	<bean name="storeBiz" class="cn.itcast.biz.impl.StoreBiz">
+		<property name="storeDao" ref="storeDao"/>
+	</bean>
 </beans>
 	
