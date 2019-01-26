@@ -101,7 +101,7 @@ public class OrdersAction extends BaseAction<Orders>{
     /**
      * 我的订单
      */
-    public void myListBypage(){
+    public void myListByPage(){
         if(null == getT1()){
             //构建查询条件
             setT1(new Orders());

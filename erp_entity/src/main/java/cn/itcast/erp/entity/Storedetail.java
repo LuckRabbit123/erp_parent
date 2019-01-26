@@ -3,7 +3,9 @@ package cn.itcast.erp.entity;
 public class Storedetail {
     private Long uuid;//编号
     private Long storeuuid;//仓库编号
+    private String storeName;//仓库名称
     private Long goodsuuid;//商品编号
+    private String goodsName;//商品名称
     private Long num;//数量
 
     public Long getUuid() {
@@ -30,4 +32,17 @@ public class Storedetail {
     public void setNum(Long num) {
         this.num = num;
     }
+    public String getStoreName() {
+        return storeName;
+    }
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
+    }
+    public String getGoodsName() {
+        return goodsName;
+    }
+    public void setGoodsName(String goodsName) {
+        this.goodsName = goodsName;
+    }
+
 }

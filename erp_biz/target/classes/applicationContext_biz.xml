@@ -43,6 +43,8 @@
 	</bean>
 	<bean name="storedetailBiz" class="cn.itcast.biz.impl.StoredetailBiz">
 		<property name="storedetailDao" ref="storedetailDao"></property>
+		<property name="goodsDao" ref="goodsDao"/>
+		<property name="storeDao" ref="storeDao"/>
 	</bean>
 	<bean name="storeBiz" class="cn.itcast.biz.impl.StoreBiz">
 		<property name="storeDao" ref="storeDao"/>
